@@ -1,0 +1,31 @@
+<h1>Pokemones</h1>
+
+<div class="flex justify-center">
+  <div
+    class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-11/12 h-screen"
+  >
+    <div class="h-80 flex" *ngFor="let pokemon of pokemons">
+      <div class="grid place-content-center rounded-lg min-w-xs min-h-200">
+        <h2 class="text-2xl text-center bg-slate-700 text-white rounded-t-lg">
+          {{ pokemon.name | titlecase }}
+        </h2>
+        <!-- <div
+          class="bg-cover bg-center"
+          style="background-image: url('https://picsum.photos/400')"
+        ></div> -->
+        <div class="w-full flex justify-center content-center p-1">
+          <div class="w-11/12">
+            <img class="" src="{{ pokemon.img }}" alt="" />
+          </div>
+        </div>
+        <!-- <p>{{}}</p> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<ul>
+  <li>
+    {{ pokemons.name | json }}
+  </li>
+</ul>
